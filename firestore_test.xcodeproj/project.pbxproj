@@ -3,11 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		45317AE553871F0714F3E24F /* Pods_firestore_testTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 560B52CBDDAC6D483EAA1471 /* Pods_firestore_testTests.framework */; };
+		6F22C1DF2279667300C6E6D9 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F22C1DD2279667300C6E6D9 /* ChatViewController.swift */; };
+		6F22C1E02279667300C6E6D9 /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F22C1DE2279667300C6E6D9 /* Chat.storyboard */; };
 		6FE9240922760A5600196989 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FE9240822760A5600196989 /* AppDelegate.swift */; };
 		6FE9240B22760A5600196989 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FE9240A22760A5600196989 /* ViewController.swift */; };
 		6FE9240E22760A5600196989 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FE9240C22760A5600196989 /* Main.storyboard */; };
@@ -43,6 +45,8 @@
 		53431DD54C4A2FF19B57372A /* Pods-firestore_testTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-firestore_testTests.release.xcconfig"; path = "Target Support Files/Pods-firestore_testTests/Pods-firestore_testTests.release.xcconfig"; sourceTree = "<group>"; };
 		560B52CBDDAC6D483EAA1471 /* Pods_firestore_testTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_firestore_testTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		67EC34F30EEFBCB7CFA54466 /* Pods-firestore_test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-firestore_test.release.xcconfig"; path = "Target Support Files/Pods-firestore_test/Pods-firestore_test.release.xcconfig"; sourceTree = "<group>"; };
+		6F22C1DD2279667300C6E6D9 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		6F22C1DE2279667300C6E6D9 /* Chat.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
 		6FE9240522760A5600196989 /* firestore_test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = firestore_test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FE9240822760A5600196989 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6FE9240A22760A5600196989 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -99,8 +103,24 @@
 				02A6F8AA794C1C7607AC19F3 /* Pods-firestore_testUITests.debug.xcconfig */,
 				D49A76414A6B1ABD252ECE22 /* Pods-firestore_testUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		6F22C1DB2279667300C6E6D9 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				6F22C1DC2279667300C6E6D9 /* Chat */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		6F22C1DC2279667300C6E6D9 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				6F22C1DD2279667300C6E6D9 /* ChatViewController.swift */,
+				6F22C1DE2279667300C6E6D9 /* Chat.storyboard */,
+			);
+			path = Chat;
 			sourceTree = "<group>";
 		};
 		6FE923FC22760A5600196989 = {
@@ -128,6 +148,7 @@
 		6FE9240722760A5600196989 /* firestore_test */ = {
 			isa = PBXGroup;
 			children = (
+				6F22C1DB2279667300C6E6D9 /* Modules */,
 				6FE9240822760A5600196989 /* AppDelegate.swift */,
 				6FE9240A22760A5600196989 /* ViewController.swift */,
 				6FE9240C22760A5600196989 /* Main.storyboard */,
@@ -177,6 +198,7 @@
 				6FE9240122760A5600196989 /* Sources */,
 				6FE9240222760A5600196989 /* Frameworks */,
 				6FE9240322760A5600196989 /* Resources */,
+				57748CBFE2D9F09AC20FE08F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -275,6 +297,7 @@
 			files = (
 				6FE9241322760A5600196989 /* LaunchScreen.storyboard in Resources */,
 				6FE9241022760A5600196989 /* Assets.xcassets in Resources */,
+				6F22C1E02279667300C6E6D9 /* Chat.storyboard in Resources */,
 				6FE9240E22760A5600196989 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -316,6 +339,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		57748CBFE2D9F09AC20FE08F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-firestore_test/Pods-firestore_test-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-firestore_test/Pods-firestore_test-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-firestore_test/Pods-firestore_test-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A175BC414AEA248270301105 /* [CP] Check Pods Manifest.lock */ = {
@@ -370,6 +410,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6FE9240B22760A5600196989 /* ViewController.swift in Sources */,
+				6F22C1DF2279667300C6E6D9 /* ChatViewController.swift in Sources */,
 				6FE9240922760A5600196989 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

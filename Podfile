@@ -5,7 +5,9 @@ target 'firestore_test' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-  # Pods for firestore_test
+  pod 'Firebase/Core'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Firestore'
 
   target 'firestore_testTests' do
     inherit! :search_paths
