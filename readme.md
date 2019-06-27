@@ -1,1 +1,3 @@
 簡易的なチャットアプリの作成を通じてfirestoreの使い方を学んだ際の記録になります.
+投稿記事
+https://qiita.com/takahiro_ishitsuka/items/c8ed9c0aa4d3257fc7ee
